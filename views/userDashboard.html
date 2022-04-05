@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="d-flex flex-column bg-white">
+    <section id="header" class="bg-white p-2">
+        <div class="container d-flex justify-content-between bg-white align-items-center">
+            <a href="index.html"><h2 class="text-dark">Grahak</h2></a>
+            <div>
+                <a href="#"> <button class="btn btn-outline-dark bg-none" onclick="logOut()"><i class="fa fa-home"></i></button></a>
+                <a href="#"> <button class="btn btn-outline-dark bg-none" onclick="openDrop()"><i class="fa fa-bell"></i></button></a>
+                <div id="notiDrop" class="dropdown bg-white shadow d-none">
+                    <div class="dropdown-item">Hello Notify 1</div>
+                    <div class="dropdown-item">Hello Notify 1</div>
+                    <div class="dropdown-item">Hello Notify 1</div>
+                    <div class="dropdown-item">Hello Notify 1</div>
+                </div>
+                <a href="#"> <button class="btn btn-outline-dark bg-none" onclick="showCart()"><i class="fa fa-shopping-cart"></i></button></a>
+                <a href="login.html"> <button class="btn btn-outline-dark bg-none" onclick="logOut()"><i class="fa fa-right-from-bracket"></i></button></a>
+            </div>
+        </div>
+       
+    </section>
+
+    <section id="cart-popup" class="bg-white text-center align-items-center justify-content-center d-none">
+        Your Cart is empty
+    </section>
+
+    <section id="dashboard" class="row p-3 bg-white d-flex text-left justify-content-around align-items-center rounded shadow ">
+       <button class="btn btn-outline-dark" id="filterBtn" onclick="showFilter()">Filters<i class="fa fa-angle-down mx-2"></i></button>
+       <div class="col-xl-3 col-sm-12 d-none" id="filterList">
+           <ul class="listNone">
+               <h5>Category</h5>
+               <li><input type="checkbox" name="" id="" class="mx-2">Household Items</li>
+               <li><input type="checkbox" name="" id="" class="mx-2">Household Items</li>
+               <li><input type="checkbox" name="" id="" class="mx-2">Household Items</li>
+               <li><input type="checkbox" name="" id="" class="mx-2">Household Items</li>
+               <li><input type="checkbox" name="" id="" class="mx-2">Household Items</li>
+           </ul>
+           <ul class="listNone">
+               <h5>Price Range</h5>
+               <input type="range" class="form-range" min="0" max="5" id="customRange2">   
+           </ul>
+           <ul class="listNone">
+               <h5>Area Range</h5>
+               <input type="range" class="form-range" min="0" max="5" id="customRange2"> 
+           </ul>
+           <ul class="listNone">
+               <h5>Delivery</h5>
+               <li><input type="radio" name="" id="" class="mx-2">Home Delivery</li>
+               <li><input type="radio" name="" id="" class="mx-2">No Delivery</li>
+           </ul>
+           <ul class="listNone">
+               <h5>Color</h5>
+               <li><input type="radio" name="" id="" class="mx-2">Black</li>
+               <li><input type="radio" name="" id="" class="mx-2">Blue</li>
+           </ul>
+       </div>
+       <div id="prodList" class="col-sm-12 col-xl-9 row p-3 bg-white d-flex justify-content-around align-items-center ">
+        <div class="itemDiv bg-white p-3 shadow rounded">
+            <div class=" d-flex align-items-center justify-content-between">
+                <h5 class="itemHead m-1">Item Name</h5>
+                <button class="itemBtn btn btn-outline-dark"><i class="fa fa-plus"></i></button>
+            </div>
+            <p class="itemSeller m-1">sellerName</p>
+            <div class="itemImages row">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+            </div>
+        </div>
+        <div class="itemDiv bg-white p-3 shadow rounded">
+            <div class=" d-flex align-items-center justify-content-between">
+                <h5 class="itemHead m-1">Item Name</h5>
+                <button class="itemBtn btn btn-outline-dark"><i class="fa fa-plus"></i></button>
+            </div>
+            <p class="itemSeller m-1">sellerName</p>
+            <div class="itemImages row">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+            </div>
+        </div>
+        <div class="itemDiv bg-white p-3 shadow rounded">
+            <div class=" d-flex align-items-center justify-content-between">
+                <h5 class="itemHead m-1">Item Name</h5>
+                <button class="itemBtn btn btn-outline-dark"><i class="fa fa-plus"></i></button>
+            </div>
+            <p class="itemSeller m-1">sellerName</p>
+            <div class="itemImages row">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+            </div>
+        </div>
+        <div class="itemDiv bg-white p-3 shadow rounded">
+            <div class=" d-flex align-items-center justify-content-between">
+                <h5 class="itemHead m-1">Item Name</h5>
+                <button class="itemBtn btn btn-outline-dark"><i class="fa fa-plus"></i></button>
+            </div>
+            <p class="itemSeller m-1">sellerName</p>
+            <div class="itemImages row">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+            </div>
+        </div>
+        <div class="itemDiv bg-white p-3 shadow rounded">
+            <div class=" d-flex align-items-center justify-content-between">
+                <h5 class="itemHead m-1">Item Name</h5>
+                <button class="itemBtn btn btn-outline-dark"><i class="fa fa-plus"></i></button>
+            </div>
+            <p class="itemSeller m-1">sellerName</p>
+            <div class="itemImages row">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+            </div>
+        </div>
+        <div class="itemDiv bg-white p-3 shadow rounded">
+            <div class=" d-flex align-items-center justify-content-between">
+                <h5 class="itemHead m-1">Item Name</h5>
+                <button class="itemBtn btn btn-outline-dark"><i class="fa fa-plus"></i></button>
+            </div>
+            <p class="itemSeller m-1">sellerName</p>
+            <div class="itemImages row">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+            </div>
+        </div>
+        <div class="itemDiv bg-white p-3 shadow rounded">
+            <div class=" d-flex align-items-center justify-content-between">
+                <h5 class="itemHead m-1">Item Name</h5>
+                <button class="itemBtn btn btn-outline-dark"><i class="fa fa-plus"></i></button>
+            </div>
+            <p class="itemSeller m-1">sellerName</p>
+            <div class="itemImages row">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+                <img src="12.jpg" alt="" class="itemImg col-3">
+            </div>
+        </div>
+       </div>
+       
+    </section>
+
+
+     <script src="handler.js"></script>
+
+</body>
+</html>

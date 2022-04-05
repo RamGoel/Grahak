@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+</head>
+<body class="d-flex flex-column">
+    <section id="header" class="bg-white p-2">
+        <div class="container d-flex justify-content-between bg-white align-items-center">
+            <a href="index.html"><h2 class="text-dark">Grahak</h2></a>
+            <div>
+                <a href="login.html"> <button class="btn btn-outline-dark bg-none">Login</button></a>
+            </div>
+        </div>
+       
+    </section>
+
+    <section id="main" class="d-flex">
+        <img src="regImg.png" alt="" class="col">
+        <section id="reg-form" class="bg-white col" >
+            <form action="" class="text-center">
+                <h1 class="">Roll on the Customers</h1>
+                <input  type="text" name="" placeholder="Business Name" class="p-2  rounded bg-white  border formInputs  d-block  ">
+                <input  type="text" name="" placeholder="Owner Name" class="p-2  rounded bg-white  border formInputs  d-block  ">
+                <input  type="text" name="" placeholder="Business Address" class="p-2  rounded bg-white  border formInputs  d-block  ">
+                <input  type="text" name="" placeholder="Products Category" class="p-2  rounded bg-white  border formInputs  d-block  ">
+                <div class="d-flex formInputs align-items-center justify-content-between">
+                    <p class=" m-1">Upload Business Front Image</p>
+                <input  type="file" name="Shop Image" id="" class="btn btn-dark border  rounded d-block ">
+                </div>
+                <button type="submit" class="btn btn-outline-dark" onclick="handleReg()">Register</button>
+            </form>
+        </section>
+    </section>
+    
+
+
+     
+    <script src="handler.js"></script>
+
+</body>
+</html>

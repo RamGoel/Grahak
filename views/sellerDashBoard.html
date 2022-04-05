@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="d-flex flex-column bg-light p-2">
+    <section id="header" class="bg-light">
+        <div class="container d-flex justify-content-between bg-light align-items-center">
+            <a href="index.html"><h2 class="text-dark">Grahak</h2></a>
+            <div>
+                <a href="login.html"> <button class="btn btn-outline-dark bg-none" onclick="logOut()"><i class="fa fa-right-from-bracket"></i></button></a>
+            </div>
+        </div>
+       
+    </section>
+
+    <section id="dashboard" class="row p-3 d-flex justify-content-around align-items-center ">
+        <!-- <div class="sidebar bg-light wft p-2 d-flex flex-column justify-content-between ">
+            
+            <button class="sideItem btn btn-outline-dark d-flex">
+                <i class="fa fa-facebook">Icon -</i>
+                <p class="m-0 itemName"> Item Name</p>
+            </button>
+            <button class="sideItem btn btn-outline-dark d-flex">
+                <i class="fa fa-facebook">Icon -</i>
+                <p class="m-0 itemName"> Item Name</p>
+            </button>
+            <button class="sideItem btn btn-outline-dark d-flex">
+                <i class="fa fa-facebook">Icon -</i>
+                <p class="m-0 itemName"> Item Name</p>
+            </button>
+            <button class="sideItem btn btn-outline-dark d-flex">
+                <i class="fa fa-facebook">Icon -</i>
+                <p class="m-0 itemName"> Item Name</p>
+            </button>
+            <button class="sideItem btn btn-outline-dark d-flex">
+                <i class="fa fa-facebook">Icon -</i>
+                <p class="m-0 itemName"> Item Name</p>
+            </button>
+            <button class="sideItem btn btn-outline-dark d-flex">
+                <i class="fa fa-facebook">Icon -</i>
+                <p class="m-0 itemName"> Item Name</p>
+            </button>
+            <button class="sideItem btn btn-outline-dark d-flex">
+                <i class="fa fa-facebook">Icon -</i>
+                <p class="m-0 itemName"> Item Name</p>
+            </button>
+            <button class="sideItem btn btn-outline-dark d-flex">
+                <i class="fa fa-facebook">Icon -</i>
+                <p class="m-0 itemName"> Item Name</p>
+            </button>
+        </div> -->
+
+        <div id="column" class=" bg-light rounded shadow p-3 dashDiv">
+            <div class="sales">
+                <div class="head d-flex align-items-center justify-content-between">
+                    <h5 class="align-self-center m-2">Recent Sales</h5>
+                    <button class="timeBtn">Day Wise<i class="fa fa-angle-down px-2"></i></button>
+                </div>
+                
+    
+                <div class="sale-metrics ">
+                    <p class="m-1 bg-dark text-white p-1 rounded">500$ Revenue</p>
+                    <p class="m-1 bg-dark text-white p-1 rounded">2k Visits</p>
+                    <p class="m-1 bg-dark text-white p-1 rounded">293 Orders</p>
+                </div>
+            </div>
+        </div>
+        <div id="column" class=" bg-light rounded shadow p-3 dashDiv">
+            <div class="Items">
+
+                <div class="addItem text-center align-items-center">
+                    <h5 class="text-left">Manage Products</h5>
+                    <button class="btn btn-outline-dark col-11 m-2">Add a New Product</button>
+                    <button class="btn btn-outline-dark col-11 m-2">Update Existing Product</button>
+                </div>
+                
+            </div>
+        </div>
+        <div id="prefSection" class=" bg-light rounded shadow p-3 dashDiv">
+            <div class="Items">
+
+                <div class="addItem text-center align-items-center">
+                    <h5 class="text-left">Your Products</h5>
+                    <div class="container">
+                        <div class=" productDiv p-1 d-flex mx-auto align-items-center">
+                            <img src="12.jpg" alt="" class="col-3">
+                            <div class="col-9 align-self-center">
+                                <p class="my-auto">Item Name</p>
+                            </div>
+                        </div>
+                        <div class=" productDiv p-1 d-flex mx-auto align-items-center">
+                            <img src="12.jpg" alt="" class="col-3">
+                            <div class="col-9 align-self-center">
+                                <p class="my-auto">Item Name</p>
+                            </div>
+                        </div>
+                        <div class=" productDiv p-1 d-flex mx-auto align-items-center">
+                            <img src="12.jpg" alt="" class="col-3">
+                            <div class="col-9 align-self-center">
+                                <p class="my-auto">Item Name</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="prefSection" class=" bg-light rounded shadow p-3 dashDiv">
+            <div class="Items">
+
+                <div class="addItem text-center align-items-center">
+                    <h5 class="text-left">Store Preferences</h5>
+                    <ul class="prefList listNone text-left">
+                        <li><input type="checkbox" class="m-2">Get Orders Online</li>
+                        <li><input type="checkbox" class="m-2">Recommend my Products</li>
+                        <li><input type="checkbox" class="m-2">Show Shop Address</li>
+                        <li><input type="checkbox" class="m-2">Show Contact Details</li>
+                        <li><input type="checkbox" class="m-2">Allow to Bargain</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+     <script src="handler.js"></script>
+
+</body>
+</html>
